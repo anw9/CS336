@@ -49,7 +49,7 @@ function Student(name, bDay, list, subject) {
 };
 Student.prototype = Object.create(Person.prototype);
 Student.prototype.printMessage = function() {
-	return "I am a Student :(";
+	return "I am a Student";
 };
 
 //Implement 2.2
