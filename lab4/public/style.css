@@ -1,0 +1,43 @@
+/*
+Arie Williams
+Sept 28 2018
+*/
+/* Cascading and inheritance */
+/*
+p {color:blue; }
+strong {color:red; text-decoration: underline}
+*/
+/*Information: Selectors*/
+body {
+font: 16px "Comic Sans MS", cursive;
+background: url("Blue-rule.png"); }
+
+strong {
+  background-color: #ddf;
+  color: #f00;
+  font: 200% "Serif"; }
+
+.spinach {
+  color: #080;
+  background-color: #ddf; }
+/*.carrot {
+  color: #fa0; } */
+#first {
+  font-style: italic; }
+
+p {
+  color: #00f; }
+
+p:before {
+  content: url("Yellow-pin.png"); }
+/*
+Compare ID vs. CLASS selector:
+A class selector is a name preceded by a full stop (.)
+An ID is name proceed by a hash symbol (#)
+An ID can be used to identify one element,
+whereas a class can be used to identify more than one
+
+Compare pseudo-selector vs selector:
+pseudo-selects have colon before them they work like methods
+on a selector 
+*/
