@@ -1,0 +1,15 @@
+-- Arie Williams
+-- Lab 6 Answers
+
+1. For some reason Chrome's Dev Tools only allowed me to test the GET method because the REST method
+defaults to GET every-time you go to the page unless you call the other methods with a button push. With
+curl the default isn't set to anything so you can test the functions POST, PUT, DELETE becuase what is run
+is called from the command line and so it by passes any default systems. The GET method, however, doesn't
+return anything.
+
+Commands:
+      - $ curl -X POST localhost:3000/request -d '{"arg":"Hello"}' -H 'Content-Type: application/json'
+      - $ curl -X PUT localhost:3000/request -d '{"arg":"Hi"}' -H 'Content-Type: application/json'
+      - $ curl -X DELETE localhost:3000/request -d '{"arg":"Hello"}' -H 'Content-Type: application/json'
+
+2. 404, or "Not Found."
