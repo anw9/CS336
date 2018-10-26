@@ -1,38 +1,38 @@
 [
-  {
-    "firstName": "Arie",
-    "lastName": "Williams",
-    "workID": "awilli",
-    "startDate": "2015/09/03"
-  },
-  {
-    "firstName": "Toussaint",
-    "lastName": "Cruise",
-    "workID": "tcruise",
-    "startDate": "2010/09/30"
-  },
-  {
-    "firstName": "Megan",
-    "lastName": "Koh",
-    "workID": "mkoh",
-    "startDate": "2012/08/17"
-  },
-  {
-    "firstName": "Lauren",
-    "lastName": "Ebels",
-    "workID": "lebels",
-    "startDate": "2011/07/05"
-  },
-  {
-    "firstName": "Kelly",
-    "lastName": "Oh",
-    "workID": "koh",
-    "startDate": "2016/10/10"
-  },
-  {
-    "firstName": "Derek",
-    "lastName": "Fisher",
-    "workID": "dfishe",
-    "startDate": "2016/10/10"
-  }
+    {
+        "firstName": "Arie",
+        "lastName": "Williams",
+        "workID": "awilli",
+        "startDate": "2015/09/03"
+    },
+    {
+        "firstName": "Toussaint",
+        "lastName": "Cruise",
+        "workID": "tcruise",
+        "startDate": "2010/09/30"
+    },
+    {
+        "firstName": "Megan",
+        "lastName": "Koh",
+        "workID": "mkoh",
+        "startDate": "2012/08/17"
+    },
+    {
+        "firstName": "Lauren",
+        "lastName": "Ebels",
+        "workID": "lebels",
+        "startDate": "2011/07/05"
+    },
+    {
+        "firstName": "Kelly",
+        "lastName": "Oh",
+        "workID": "koh",
+        "startDate": "2016/10/10"
+    },
+    {
+        "firstName": "Derek",
+        "lastName": "Fisher",
+        "workID": "dfishe",
+        "startDate": "2016/10/10"
+    }
 ]
