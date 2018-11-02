@@ -1,0 +1,35 @@
+Arie Williams
+Oct. 31 2018
+
+9.1
+a) What bundle does is take all the relevant files to a particular web-app and combines/condenses it, including
+ the imported files, reducing the number of individual HTTP requests to the server by combining multiple files.
+ The new file is 6.13KB which is quite a bit smaller than combining all the files which would roughly be about over 200KB
+ It ends up loading in react, react-dom, jquery.min, remarkable.min, and bundle.js
+
+ b) Babel makes sure the application is using the next versions of JavaScript and it uses JavaScript syntax extensions,
+  such as React's JSX in order to integrate and compile every type of feature and extensions you want to make available
+  to the code
+
+c) Yes because bundle isn't affecting what the server can be presented, but also no because there aren't actually any HTML
+ elements in the index.html to render so nothing is displayed but the form.
+
+ d)It takes the jsx file and pre-processes them in order to serve them up efficiently.
+
+9.2
+ a) The bundle is now larger at 1.31GB, because there more files to bundle because of the imports and then linking to the index.HTML
+    It has also made index.html a lot cleaner to look at because it is a lot emptier and takes only what is necessary.
+
+ b) Since web pack is made to import and configure all the files, we never take in the same file twice. Also when we import files
+    they are being placed into the correct location in our application, another packing features.
+
+ c) Bundle looks like its the only thing being loaded. This is because all the modules are loaded into the same place and so they
+    aren't being taken in individually, that includes everything.
+
+9.3
+ a) From what I can tell there isn't much of a difference in the two ports, it could be that the new port takes a bit shorter to load.
+    But the servers are both development/testing servers it isn't placed publicly and only stays on the localhost. When I look at the
+    react modules and commit my changes the 3001 refreshes a lot faster and shows the changes quicker. Index and bundle stay the same.
+
+ b) When I load in the /api/comments gives me a list of all my JSON comments, this port doesn't automatically reload/display the old changes.
+ c)
