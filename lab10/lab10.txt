@@ -1,0 +1,13 @@
+a) One of the biggest differences is the fact that Mongo use documents instead of tables/rows,
+documents can be inserted into a database using a command line while SQL to my knowledge doesn't
+allow this operation outside of its own scripting tool, and even if it does the CRUD operations for
+SQL are a lot longer and more specified than the simple .js style of insertion. They both, however, store data
+in an item format and allow for the editing and updating of this data.
+
+b) Allowing for local editing of the database makes it very accessible, however, this easy access could make it very
+dangerous if someone is using the data at the same time that someone is updating it in a different location.
+This can create data consistency issues in theory but in practice it seems pretty good so far.
+
+c) You could should probably not use it in production because sandbox, by nature allows for all operations on a database,
+a freedom that could be potentially problematic for an active database. However, in theory this database is no different than any
+other and could store data as necessary with relatively little to no problem.
