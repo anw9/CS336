@@ -48,6 +48,24 @@ var PeopleBox = React.createClass({
       }
 });
 
+var PeopleList = React.createClass({
+    render: function() {
+        var personNodes = this.props.data.map(function(person) {
+          return (
+            <Person
+            firstName={person.firstName} lastName={person.lastName}
+            workID={person.workID} startDate={person.startDate} key={person._id}>
+            </Person>
+          );
+        });
+        return (
+          <div className="personList">
+            {personNodes}
+          </div>
+        );
+    }
+});
+
 var PersonForm = React.createClass({
     getInitialState: function() {
         return {firstName: '', lastName: '', workID: '', startDate: ''};
@@ -58,7 +76,7 @@ var PersonForm = React.createClass({
       handleLastNameChange: function(e) {
         this.setState({lastName: e.target.value});
       },
-      handleWorkIdChange: function(e) {
+      handleWorkIDChange: function(e) {
         this.setState({workID: e.target.value});
       },
       handleStartDateChange: function(e) {
@@ -95,7 +113,7 @@ var PersonForm = React.createClass({
               type="text"
               placeholder="Your Work ID"
               value={this.state.workID}
-              onChange={this.handleWorkIdChange}
+              onChange={this.handleWorkIDChange}
             />
             <input
               type="text"
@@ -118,7 +136,7 @@ var Person = React.createClass({
             </h2>
 
             <p className="workID">
-                Login ID: {this.props.workID}
+                Work ID: {this.props.workID}
             </p>
             <p className="startDate">
                 Start Date: {this.props.startDate}

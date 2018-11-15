@@ -38,8 +38,8 @@ app.post('/people', function(req, res){
         {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
-            workId: req.body.workID,
-            startDate: req.body.stDate
+            workID: req.body.workID,
+            startDate: req.body.startDate
 
         },
         function(err, r) {
@@ -70,8 +70,8 @@ app.put('/person/:id', function(req, res) {
     {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      workId: req.body.workID,
-      startDate: req.body.stDate
+      workID: req.body.workID,
+      startDate: req.body.startDate
     },
     function(err, result) {
       assert.equal(null, err);
@@ -136,7 +136,5 @@ MongoClient.connect('mongodb://cs336:' + process.env.MONGO_PASSWORD + '@ds045087
 
   db.collection('people').find().toArray(function (err, result) {
     if (err) throw err
-
-    console.log(result)
   });
 });
