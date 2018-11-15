@@ -1,5 +1,14 @@
-a)
+a)Development allows for quick and easy manipulation of files and projects without going through the process
+of checking rechecking and pushing new information. You do have to do more overhead during testing, making sure commands
+and connections are made properly, but it is very efficient.
+Production maximizes web efficiency it allows for the quick and easy compilation and projection of the projects files
+in one complete and deliverable package.
 
-b)
+b) Production uses auto-prefixer, which makes your CSS compatible with any browser it also
+tells web-pack that you are running production which optimizes the application (Uglify).
+You can search the source files from the browser and the console will display that you are now working in production
 
-c) 
+c) It is a lot easier, especially if the application isn't getting much traffic, it is simple to deploy and
+allows for easy connection to all outlets including git and mongo.
+
+d) It uses the npm start and install scripts from the package.json file and you can see the application build in the console output
