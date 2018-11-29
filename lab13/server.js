@@ -10,18 +10,13 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser');
-assert = require('assert');
+var assert = require('assert');
 var app = express();
+var MongoClient = require('mongodb').MongoClient;
 var db;
-
-var COMMENTS_FILE = path.join(__dirname, 'comments.json');
-
-var MongoClient = require('mongodb').MongoClient
-
 var APP_PATH = path.join(__dirname, 'dist');
 
 app.set('port', (process.env.PORT || 3000));
@@ -44,20 +39,22 @@ app.use(function(req, res, next) {
 app.get('/api/comments', function(req, res) {
   db.collection('comments').find().toArray(function (err, result) {
     assert.equal(null, err);
+
     res.json(result);
-    });
+  });
 });
 
 app.post('/api/comments', function(req, res) {
   db.collection('comments').insertOne(
-  {
-    id: Date.now(),
-    author: req.body.author,
-    text: req.body.text
-  },
-  function(err, r) {
-    assert.equal(null, err);
-  });
+    {
+      id: Date.now(),
+      author: req.body.author,
+      text: req.body.text
+    },
+    function(err, r) {
+      assert.equal(null, err);
+    }
+  );
 });
 
 app.get('/api/comments/:id', function(req, res) {
@@ -96,12 +93,11 @@ app.delete('/api/comments/:id', function(req, res) {
 
 app.use('*', express.static(APP_PATH));
 
-
 MongoClient.connect('mongodb://cs336:' + process.env.MONGO_PASSWORD + '@ds045087.mlab.com:45087/cs336', function (err, client) {
   if (err) throw err
 
   db = client;
-  
+
   app.listen(app.get('port'), function() {
       console.log('Server started: http://localhost:' + app.get('port') + '/');
   });
