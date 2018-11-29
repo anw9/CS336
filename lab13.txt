@@ -1,0 +1,9 @@
+1.
+a) For a single page application there isn't much of a benefit but once more pages are added the speed of the rendering and loading data is faster than loading a brand new HTML page each time a page changes.
+b) One isn't better than the other they are just used for different things. When it comes to bigger applications browseHistory is a lot better because it knows URLs instead of using hashes which are better for static and simple applications and browsers.
+c) HashHistory makes its own system of histories using hashes to create unique key values to add to the end of the URLs. BrowseHistory needs to be ready for the URLs that are going to be handled.
+
+2.
+a) CommentEdit maintains the author and text values in a state, commentBox just maintains all data and _isMounted as the state.
+b) PUT and DELETE in commentEdit uses the router instead to move between homepages because data will appear there, when a request is canceled its usually because there is no data to retrieve in the branch.
+c) HyperLinks are usually linked to documents while react links are  routes.
