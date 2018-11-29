@@ -10,6 +10,7 @@ module.exports = React.createClass({
     return { data: [], _isMounted: false };
   },
     loadCommentsFromServer: function() {
+       if (this.state._isMounted) {
       $.ajax({
         url: API_URL,
         dataType: 'json',
@@ -21,6 +22,7 @@ module.exports = React.createClass({
           console.error(API_URL, status, err.toString());
         }.bind(this)
       });
+    }
     },
     handleCommentSubmit: function(comment) {
       var comments = this.state.data;

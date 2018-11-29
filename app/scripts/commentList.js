@@ -7,9 +7,9 @@ module.exports = React.createClass({
       var commentNodes = this.props.data.map(function(comment) {
         return (
           <Comment id={comment.id} author={comment.author} key={comment.id}>
-            {comment.text}
-          </Comment>
-        );
+          {comment.text}
+        </Comment>
+      );
       });
       return (
         <div className="commentList">

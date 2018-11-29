@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 import marked from 'marked';
 
 module.exports = React.createClass({
