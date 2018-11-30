@@ -1,6 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-module.exports = React.createClass({
+var CommentForm = React.createClass({
     getInitialState: function() {
       return {author: '', text: ''};
     },
@@ -40,3 +41,4 @@ module.exports = React.createClass({
       );
     }
   });
+module.exports = CommentForm;
