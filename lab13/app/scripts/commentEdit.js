@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 import {API_URL} from './global';
 
-module.exports = React.createClass({
+var CommentEdit = React.createClass({
     getInitialState: function () {
         return {author: '', text: ''};
     },
@@ -94,3 +94,4 @@ module.exports = React.createClass({
         );
     }
 });
+module.exports = CommentEdit;
